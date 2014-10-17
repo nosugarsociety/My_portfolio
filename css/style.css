@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:900);
+
+/*--------------------
+   Main Paragraph
+----------------------*/
+
+p {
+	font-family: 'Lato', sans-serif;
+    font-size: 400px;
+    line-height: 420px;
+    text-align:center;
+    letter-spacing: -10px
+}
+
+span a {
+	 color: #2000ED;
+}
+
+
+/*--------------------
+   General Style
+----------------------*/
+li {
+     list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+/*--------------------
+   Hidden aside menu
+----------------------*/
+aside {
+	font-family: 'Lato', sans-serif;
+	font-size: 320px;
+	color:white;
+
+}
+
+.wrap {
+	background-color: black;
+	width:2000px;
+
+}
+.letterspacing {
+
+	padding-top:150px;
+	padding-left:5%;
+	letter-spacing: -10px;
+	line-height: 300px;
+}
+
+.letterspacing li a {
+	color:white;
+}
+.social {
+	/*padding-bottom:0px;*/
+	padding-left:5%;
+}
+.social ul {
+	padding-bottom:700px;
+}
+
+.social li {
+	font-size:100px;
+	display: inline;
+	
+}
