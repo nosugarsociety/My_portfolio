@@ -1,15 +1,101 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:900);
 
+
+html, body {
+	min-height:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+}
+
+/*--------------------
+   Z-index Layers
+----------------------*/
+
+#code-background {
+	top: 0;
+	width: 900px;
+	z-index: 1;
+	position: absolute;
+}
+
+#code-background > p {
+	color:rgba(156,156,156,0.5);
+	font-family: sans-serif;
+	font-size:20px;
+	letter-spacing:1px;
+	line-height:1.5;
+}
+
+#silhouette {
+    top:0;
+    z-index:2;
+    position: fixed;
+}
+
+#intro {
+	margin-top:800px;
+	width: 100%;
+	z-index: 4;
+	position:absolute;
+	background-color: rgba(255,255,255,0);
+}
+
+#intro p {
+	padding-top:0;
+	font-size: 100px;
+	line-height: 110px;
+	text-align: center;
+	letter-spacing: 1px;
+
+	}
+
+
+
+/* p::before {
+  content: url(images/PF-01.png);
+} */
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+/*--------------------
+   Fa-bars button.
+----------------------*/
+ 
+#open { 
+	
+    font-size: 10px;
+    z-index:6;
+    position:fixed;
+    width:100%;
+    z-index: 200;
+
+    } 
+
+#open > i {
+	padding-left:93%;
+	color: black;	
+}
+
+.great-white {
+	color: white !important;
+}
+
+
 /*--------------------
    Main Paragraph
 ----------------------*/
 
 p {
 	font-family: 'Lato', sans-serif;
-    font-size: 400px;
-    line-height: 420px;
-    text-align:center;
-    letter-spacing: -10px
 }
 
 span a {
@@ -29,25 +115,31 @@ a{
 }
 /*--------------------
    Hidden aside menu
-----------------------*/
+---------------------*/
 aside {
+	margin:0;
+	min-height:100%;
+	height:100%;
+	display:none;
 	font-family: 'Lato', sans-serif;
-	font-size: 320px;
+	font-size: 70px;
 	color:white;
-
+	z-index: 100;
+	position:absolute;
+	right: 0;
 }
 
 .wrap {
 	background-color: black;
-	width:2000px;
+	width:500px;
 
 }
 .letterspacing {
 
 	padding-top:150px;
 	padding-left:5%;
-	letter-spacing: -10px;
-	line-height: 300px;
+	letter-spacing: -4px;
+	line-height: 80px;
 }
 
 .letterspacing li a {
@@ -55,14 +147,18 @@ aside {
 }
 .social {
 	/*padding-bottom:0px;*/
-	padding-left:5%;
+	
+	padding:0;
+	margin-left:-12px;
+
 }
 .social ul {
 	padding-bottom:700px;
-}
+	
+	}
 
 .social li {
-	font-size:100px;
+	font-size:60px;
 	display: inline;
-	
+
 }
