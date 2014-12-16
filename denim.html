@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"rel="stylesheet">
+    <link rel="stylesheet" href="css/denimstyle.css">
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+
+     
+
+
+</head>
+
+<body>
+    <div class="responsive">
+     
+      <ul class="content">
+
+      <!-- 1 -->
+            <li>
+                  <div class="card-front">
+                        <h2><b>Indigo Extraction</b></h2>
+
+                        <p>Dying. Another term you will without a doubt come across when entering the Raw Denim world.</p>
+                  </div>
+
+                  <div class="card-back">
+                        <h2><b>Click here</b></h2>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="all-content">
+                        <h1>Dive<br> into<br> Indigo</h1>
+                        <div class="video">
+                             <iframe class="video" width="420" height="315" src="http://www.youtube.com/embed/hXeectd1GSM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                  </div>
+            </li>
+            <li>
+                  <div class="card-front">
+                        <h2><b>Making of Denim</b></h2>
+                        <p>Denim is more so an investment than a staple item.</p>
+                  </div>
+                  <div class="card-back">
+                        <h2><b>Click here</b></h2>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="all-content">
+                       <h1>Absolute<br>Denim</h1>
+                       <iframe class="video" width="560" height="315" src="http://www.youtube.com/embed/BgyffAdOxRc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                  </div>
+            </li>
+
+      <!-- 2 -->
+            <li>
+                  <div class="card-front">
+                        <h2><b>Sewing Tips</b></h2>
+                        <p>Sewing a pair of jeans is not a project for the faint of heart.</p>
+                  </div>
+                  <div class="card-back">
+                        <h2><b>Click here</b></h2>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="all-content">
+                        <h1>5 tips<br> for<br>  Sewing <br> Denim</h1>
+                    
+                    <div class="row2">
+                        <img src="images/sewing.png">
+                        <p>1. Denim frays and can be very hard to cut through particularly when layered. Use sharp cutting tools. Start your project off right by using sharp tools to cut your prepped fabric.
+
+                        2. This fabric is built to be durable and can bend or break your sewing machine needle. Use a denim needle, which is a strong thick needle with a very sharp point. It’s made to handle the challenge of sewing denim
+
+                        3. Use the right machine accessories made for denim sewing. Choose the foot and settings on your machine that are best suited to getting through thick fabrics. 
+
+                        4. Reduce bulk. Miter corners and press frequently to minimize bulk and keep seams smooth.
+
+                        5. Sew slowly. Rushing is bad. Slowly is sexier and good for denim sewing here. Firmly hold your fabric on either side of the presser foot without pushing or pulling.</p>
+                    </div>
+                     
+                     
+                  </div>
+            </li>
+
+            <li>
+                  <div class="card-front">
+                        <h2><b>A.P.C</b></h2>
+                        <p>Absolute denim you should have in your wardrobe.</p>
+                  </div>
+                  
+                  <div class="card-back">
+                        <h2><b>Click here</b></h2>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="all-content">
+                     <h1>Petite<br> Standard</h1>
+                     <div class="row2">   
+                        <img class="apc" src="images/APC.png" >
+                        <p class="apc">othing is created or destroyed, it is merely transformed. This adage is fulfilled in every respect by the Butler jeans concept. Customers are encouraged to bring their old denim jeans to any A.P.C. store or send it to the online store, where they will be exchanged for a new pair at half price. Broken in naturally over time, their attractive patina created and preserved in accordance with washing instru ctions, the jeans thus reappear, beginning a second life. But not until they have been washed, mended and marked with the initials of their former owner by our workshops. Each pair is therefore truly unique.</p>
+                    </div>
+                  </div>
+            </li>
+      </ul>
+</div>
+
+</body>
+
+	  
+
+
+<script>
+$('.all-content').hide();
+
+var bgColor;
+var effect = 'animated bounceInLeft'; 
+
+$('.content li').click(function(){
+      $('.card-front, .card-back').hide();
+      $('.content li').removeClass('active').hide().css('border','none');
+      $(this).addClass('active').show();
+      bgColor = $('.active .card-back').css('background-color');
+      $('.content').css('background-color',bgColor);
+      $('.close, .all-content').show();
+      $('.responsive').append('<span class="close">close</span>').addClass(effect);
+});
+
+
+$('.responsive').on('click', '.close', function(){
+
+      $('.close').remove();
+      bgColor = $('.active .card-front').css('background-color');
+      $('.responsive').removeClass(effect);
+      $('.all-content').hide();
+      $('.content li').removeClass('active').show().css({ 'border-bottom':'1px solid #2c2c2c', 'ber-left':'1px solid #2c2c2c' });
+      $('.card-front, .card-back').show();
+      $('.content').css('background-color',bgColor);
+});
+
+<!-- Full width and height vedeo -->
+
+$(function(){
+  $('.video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+  $(window).resize(function(){
+    $('.video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+  });
+});
+
+
+
+
+</script>
+</body>
+</html>
